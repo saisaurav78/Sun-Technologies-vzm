@@ -11,9 +11,9 @@ html,body{
   width: 100%;
   height: 100%;
 }
-html{
+/* html{
   scroll-behavior: smooth;
-}
+} */
 .slick-slider .slick-prev::before,
 .slick-slider .slick-next::before {
   color: #008ED3 !important;
