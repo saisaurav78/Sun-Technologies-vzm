@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Description, Dialog, DialogPanel, DialogTitle } from '@headlessui/react';
 
 const ContactUs = () => {
-   let [isOpen, setIsOpen] = useState(true);
+   let [isOpen, setIsOpen] = useState(false);
   const [data, setData] = useState({
     email: '',
     subject: '',
@@ -101,9 +101,7 @@ const ContactUs = () => {
             type='submit'
             className='py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-customBlue sm:w-fit hover:bg-customBlack transition-all ease-in-out duration-200 flex items-center justify-center
             min-w-20 min-h-12'
-            disabled={loading}
-            onClick={()=>setIsOpen(true)}
-          >
+            disabled={loading}>
             {loading ? (
               <div
                 className='w-5 h-5 border-2 border-t-transparent border-white rounded-full animate-spin'
