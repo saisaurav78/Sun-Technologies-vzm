@@ -28,8 +28,8 @@ const ContactUs = () => {
     try {
       const response = await axios.post('/api/email', data);
       if (response.status === 200) {
-        setSuccess(response.data.message || 'Message sent successfully!');
         setIsOpen(true)
+        setSuccess('Message sent successfully!');
          setData({
            email: '',
            subject: '',
@@ -37,7 +37,7 @@ const ContactUs = () => {
          });
      }
     } catch (err) {
-      setError(err.response?.data?.message || 'Failed to send Message. Please try again later.');
+      setError('Failed to send Message. Please try again later.');
     } finally {
       setLoading(false); 
     }
