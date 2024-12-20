@@ -27,7 +27,8 @@ export async function POST(request) {
 
     // Email options
     const mailOptions = {
-      from: email, // Sender's email
+      // Sender's email
+      replyTo:email,
       to: 'saisaurav78@gmail.com', // Recipient email
       subject: subject, // Email subject
       text: message, // Email body
@@ -37,7 +38,7 @@ export async function POST(request) {
     await transporter.sendMail(mailOptions);
 
     // Return success response
-    return NextResponse.json({ message: 'Message sent successfully!' }, { status: 200 });
+    return NextResponse.json({ message: 'Email sent successfully!' }, { status: 200 });
   } catch (error) {
     console.error('Error sending email:', error);
 

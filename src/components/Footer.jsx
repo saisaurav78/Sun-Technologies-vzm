@@ -18,6 +18,7 @@ const Footer = () => {
                 allowFullScreen=''
                 loading='lazy'
                 referrerPolicy='no-referrer-when-downgrade'
+                title='Sun Technologies Map'
               ></iframe>
             </div>
 
